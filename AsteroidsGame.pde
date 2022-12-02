@@ -1,9 +1,17 @@
+//your variable declarations here
 Spaceship chamomile;
+Asteroid cat;
 Star[] brilliance = new Star[200];
+ArrayList <Asteroid> cats = new ArrayList <Asteroid>();
+
 public void setup() 
 {
-  size(500, 500);
+  size(1280, 720);
   chamomile = new Spaceship();
+//cat = new Asteroid();
+  for (int i = 0; i < 15; i++){
+    cats.add(new Asteroid());
+  }
   for (int i = 0; i < brilliance.length; i++){
     brilliance[i] = new Star();
   }
@@ -16,6 +24,10 @@ public void draw()
   }
   chamomile.move();
   chamomile.show();
+  for (int i = 0; i < cats.size(); i++){
+    cats.get(i).move();
+    cats.get(i).show();
+  }
 }
 public void keyPressed(){
   if(key == 'a' || key == 'A'){
