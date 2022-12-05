@@ -2,7 +2,7 @@
 Spaceship chamomile;
 Asteroid cat;
 Star[] brilliance = new Star[200];
-ArrayList <Asteroid> cats = new ArrayList <Asteroid>();
+ArrayList <Asteroid> cats = new ArrayList <Asteroid> ();
 
 public void setup() 
 {
@@ -27,6 +27,9 @@ public void draw()
   for (int i = 0; i < cats.size(); i++){
     cats.get(i).move();
     cats.get(i).show();
+    float toad = dist((float)chamomile.getX(), (float)chamomile.getY(), (float)cats.get(i).getX(), (float)cats.get(i).getY());
+    if (toad < 50)
+      cats.remove(i);
   }
 }
 public void keyPressed(){
