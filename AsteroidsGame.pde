@@ -51,6 +51,6 @@ public void keyPressed(){
     chamomile.hyperspace();
   }
   if(key == 'x' || key == 'X'){
-    shots.add(new Bullet(chamomile));
+    shots.add(new Bullet());
   }
 }
