@@ -4,8 +4,8 @@ class Particle
   Particle() {
     myAngle = (Math.random()*2*PI);
     mySpeed = (Math.random()*10);
-    myX = cats.get(i).getX();
-    myY = cats.get(i).getY();
+    myX = 0;
+    myY = 0;
     myC = color((int)(Math.random()*200), -33+(int)(Math.random()*100), 10+(int)(Math.random()*250));
     // myC = color(32+(int)(Math.random()*50), -33+(int)(Math.random()*50), 210+(int)(Math.random()*50));
   }
