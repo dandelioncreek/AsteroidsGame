@@ -8,7 +8,7 @@ Particle [] part = new Particle[2000];
 
 public void setup() 
 {
-  size(800, 600);
+  size(800, 400);
   chamomile = new Spaceship();
 //cat = new Asteroid();
   for (int i = 0; i < 15; i++){
@@ -34,11 +34,13 @@ public void draw()
     cats.get(i).show();
     float toad = dist((float)chamomile.getX(), (float)chamomile.getY(), (float)cats.get(i).getX(), (float)cats.get(i).getY());
     if (toad < 50){
-      cats.remove(i);
       for (int i = 0; i < part.length; i++) {
+        part[i].myX = cats.get(i).getX;
+        part[i].myY = cats.get(i).getY;
         part[i].move();
         part[i].show();
       }
+      cats.remove(i);
     }
   }
   for (i = 0; i < shots.size(); i++){
