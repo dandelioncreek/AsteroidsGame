@@ -3,6 +3,7 @@ Spaceship chamomile;
 Asteroid cat;
 Star[] brilliance = new Star[200];
 ArrayList <Asteroid> cats = new ArrayList <Asteroid> ();
+ArrayList <Bullet> shots = new ArrayList <Bullet> ();
 
 public void setup() 
 {
@@ -31,6 +32,10 @@ public void draw()
     if (toad < 50)
       cats.remove(i);
   }
+  for (i = 0; i < shots.size(); i++){
+    shots.get(i).move();
+    shots.get(i).show();
+  }
 }
 public void keyPressed(){
   if(key == 'a' || key == 'A'){
@@ -44,5 +49,8 @@ public void keyPressed(){
   }
   if(key == 'h' || key == 'H'){
     chamomile.hyperspace();
+  }
+  if(key == ' '){
+    shots.add(new Bullet(chamomile));
   }
 }
