@@ -35,6 +35,10 @@ public void draw()
     float toad = dist((float)chamomile.getX(), (float)chamomile.getY(), (float)cats.get(i).getX(), (float)cats.get(i).getY());
     if (toad < 50)
       cats.remove(i);
+      for (int i = 0; i < part.length; i++) {
+        part[i].move();
+        part[i].show();
+      }
   }
   for (i = 0; i < shots.size(); i++){
     shots.get(i).move();
