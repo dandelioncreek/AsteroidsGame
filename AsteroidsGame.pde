@@ -4,10 +4,14 @@ Asteroid cat;
 Star[] brilliance = new Star[200];
 ArrayList <Asteroid> cats = new ArrayList <Asteroid> ();
 ArrayList <Bullet> shots = new ArrayList <Bullet> ();
+Particle [] part = new Particle[2000];
 
 public void setup() 
 {
   size(1280, 720);
+  for (int i = 0; i < part.length; i++) {
+    part[i] = new Particle();
+  }
   chamomile = new Spaceship();
 //cat = new Asteroid();
   for (int i = 0; i < 15; i++){
