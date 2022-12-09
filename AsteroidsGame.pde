@@ -50,7 +50,7 @@ public void keyPressed(){
   if(key == 'h' || key == 'H'){
     chamomile.hyperspace();
   }
-  if(key == ' '){
+  if(key == 'x' || key == 'X'){
     shots.add(new Bullet(chamomile));
   }
 }
