@@ -8,11 +8,22 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
   protected double myXspeed, myYspeed; //holds the speed of travel in the x and y directions   
   protected double myPointDirection; //holds current direction the ship is pointing in degrees    
  
-  double getX(){
+  public double getX(){
     return myCenterX;
   }
-  double getY(){
+  public double getY(){
     return myCenterY;
+  }
+  
+  public double getspeedX(){
+    return myXspeed;
+  }
+  public double getspeedY(){
+    return myYspeed;
+  }
+  
+  public double getPointDirection(){
+    return myPointDirection;
   }
   //Accelerates the floater in the direction it is pointing (myPointDirection)   
   public void accelerate (double dAmount)   
