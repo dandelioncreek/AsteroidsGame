@@ -15,7 +15,7 @@ int score = 0;
 
 public void setup() 
 {
-  size(800, 600);
+  size(900, 450);
   chamomile = new Spaceship();
   //cat = new Asteroid();
   for (int i = 0; i < 15; i++) {
