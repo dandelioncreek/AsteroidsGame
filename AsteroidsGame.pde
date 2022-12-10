@@ -29,24 +29,25 @@ public void setup()
 public void draw() 
 {
   background(0);
-  fill(202, 247, 244);
+  fill(202, 247, 244); //light blue
   textAlign(LEFT, CENTER);
   textSize(20);
   text("Score: " + score, width-150, 0, 150, 40);
-  fill(202, 247, 244);
+  fill(250, 210, 172);//light orange
   textAlign(LEFT, CENTER);
   textSize(20);
   text("Health: " + health, 20, 0, 150, 40);
   if (health == 0) {
     background(0);
     textAlign(CENTER, CENTER);
-    textSize(100);
+    textSize(80);
     text("You lose, better luck next time", 0, 0, width, height/2);
     textSize(50);
     text("=^o.o^=      >      <º)))><", 0, height/2, width, height/2);
     return;//will end draw
   }
   if (cats.size() == 0) {
+    fill(202, 247, 244);
     textAlign(CENTER, CENTER);
     textSize(70);
     text("You win, congrats conqueror of the catverse", 0, 0, width, height/2);
